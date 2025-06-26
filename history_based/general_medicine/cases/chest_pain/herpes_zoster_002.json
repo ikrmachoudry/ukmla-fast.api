@@ -1,0 +1,99 @@
+{
+  "case_id": "herpes_zoster_002",
+  "station_name": "Herpes Zoster - Chest Pain",
+  "category": "history_based",
+  "sub_category": "chest_pain",
+  "exam_image": "general_med/Shingles.jpg",
+  "age": 60,
+  "gender": "male",
+  "name": "Mr. Ali Qureshi",
+  "presenting_complaint": [
+    "I've had some discomfort in my chest.",
+    "Something’s been bothering me on my left side.",
+    "I’m not sure, but my chest feels odd.",
+    "I’ve been feeling off — just some weird pressure here.",
+    "It’s not painful exactly, just uncomfortable around the chest area."
+  ],
+  "diagnosis": "Herpes Zoster (Shingles)",
+  "symptoms": [
+    "Burning pain localized to the left side of chest",
+    "Pain worsens with touch",
+    "Mild rash on chest",
+    "Rash started as small blisters",
+    "Tingling sensation began before rash appeared",
+    "Clustered vesicular rash in a dermatomal pattern"
+  ],
+  "red_flags": [
+    "Pain in dermatomal distribution",
+    "Rash onset after burning pain",
+    "Neuropathic quality of pain"
+  ],
+  "differentials": [
+    "MI",
+    "Costochondritis",
+    "MSK pain",
+    "GERD"
+  ],
+  "medical_history": [
+    "Type 2 Diabetes",
+    "Hypertension"
+  ],
+  "medications": [
+    "Metformin",
+    "Amlodipine"
+  ],
+  "family_history": [
+    "Mother had diabetes"
+  ],
+  "social_history": {
+    "smoking": "non-smoker",
+    "alcohol": "never",
+    "diet": "moderate",
+    "exercise": "light walking"
+  },
+  "ice": {
+    "ideas": "Maybe it’s a heart attack or muscle pull?",
+    "concerns": "It’s painful and strange, I’ve never had a rash like this before.",
+    "expectations": "I want to know if it’s serious and get something for the pain."
+  },
+  "examination": {
+    "vitals": {
+      "BP": "138/85 mmHg",
+      "HR": "86 bpm",
+      "RR": "18",
+      "SpO2": "98%",
+      "Temp": "37.2°C"
+    },
+    "gpe": "Patient appears uncomfortable, rubbing left chest.",
+    "skin_exam": "Vesicular rash in left T4 dermatome, crusting in some areas, no discharge.",
+    "cardio_exam": "Normal heart sounds, no murmur",
+    "resp_exam": "Clear breath sounds bilaterally"
+  },
+  "investigations": {
+    "ECG": "Normal sinus rhythm, no ST/T changes",
+    "Troponin": "Normal",
+    "Chest X-ray": "No abnormalities seen"
+  },
+  "exam_findings": "Dermatomal vesicular rash on the left chest, normal vitals, normal heart and lung exam.",
+  "investigation_findings": "ECG and troponin normal. Chest X-ray clear.",
+  "patient_voice_mood": "Tired, uncomfortable",
+  "closure_lines": [
+    "Thank you doctor, that helps a lot.",
+    "Do I need any tests?",
+    "What’s the treatment?",
+    "Will it go away on its own?"
+  ],
+  "ending_cue": "That’s all doctor, thank you for today.",
+  "feedback": {
+    "summary": "You recognized a non-cardiac cause of chest pain and explored the rash well.",
+    "score": "7.8/10",
+    "improvement": "Discuss antiviral treatment options and safety net if worsening."
+  },
+  "tags": [
+    "chest_pain",
+    "shingles",
+    "herpes_zoster",
+    "neuropathic_pain",
+    "rash"
+  ]
+}

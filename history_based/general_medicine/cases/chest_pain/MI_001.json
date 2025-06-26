@@ -1,0 +1,97 @@
+{
+  "case_id": "MI_chest_pain",
+  "station_name": "Myocardial Infarction - Chest Pain",
+  "category": "history_based",
+  "sub_category": "chest_pain",
+  "exam_image": "general_med/mi.jpg",
+  "age": 55,
+  "gender": "male",
+  "name": "John Thompson",
+  "presenting_complaint": [
+    "I’ve been having some tightness in my chest.",
+    "Something doesn’t feel right in the middle of my chest.",
+    "I just feel this odd pressure here.",
+    "It came on suddenly and hasn’t gone away.",
+    "My chest feels really uncomfortable."
+  ],
+  "diagnosis": "Myocardial Infarction",
+  "symptoms": [
+    "Central chest pain",
+    "Radiates to left arm",
+    "Worse with exertion",
+    "Relieved by rest",
+    "Shortness of breath",
+    "Sweating"
+  ],
+  "red_flags": [
+    "Sudden onset",
+    "Continuous pain",
+    "Not relieved by rest"
+  ],
+  "differentials": [
+    "GERD",
+    "MSK pain",
+    "PE",
+    "Angina"
+  ],
+  "medical_history": [
+    "Hypertension",
+    "Hyperlipidemia"
+  ],
+  "medications": [
+    "Atorvastatin",
+    "Aspirin"
+  ],
+  "family_history": [
+    "Father had heart attack at 50"
+  ],
+  "social_history": {
+    "smoking": "20 cigarettes/day",
+    "alcohol": "occasional",
+    "diet": "unhealthy",
+    "exercise": "minimal"
+  },
+  "ice": {
+    "ideas": "I think it could be gas or anxiety.",
+    "concerns": "I’m scared it might be a heart attack.",
+    "expectations": "I want something to stop this pain."
+  },
+  "examination": {
+    "vitals": {
+      "BP": "150/90 mmHg",
+      "HR": "98 bpm",
+      "RR": "22",
+      "SpO2": "94%",
+      "Temp": "37.1°C"
+    },
+    "gpe": "Patient is anxious, clutching chest",
+    "cardio_exam": "Normal heart sounds, no murmur"
+  },
+  "investigations": {
+    "ECG": "ST elevation in V2–V5",
+    "Troponin": "Elevated",
+    "Chest X-ray": "Normal"
+  },
+  "exam_findings": "Patient is anxious and clutching chest. BP 150/90 mmHg, HR 98 bpm, SpO₂ 94%. Cardio exam unremarkable.",
+  "investigation_findings": "ECG shows ST elevation in V2–V5. Troponin levels are elevated. Chest X-ray appears normal.",
+  "patient_voice_mood": "Worried and tense",
+  "closure_lines": [
+    "Thank you doctor, I hope it’s nothing serious.",
+    "Will I need to stay in the hospital?",
+    "What do you think it is?",
+    "Do I need to stop working?"
+  ],
+  "ending_cue": "Thanks, doctor. That’s all for now.",
+  "feedback": {
+    "summary": "Good structure, covered major DDs, explained diagnosis well.",
+    "score": "7.5/10",
+    "improvement": "Include lifestyle advice and more safety netting."
+  },
+  "tags": [
+    "chest_pain",
+    "mi",
+    "myocardial_infarction",
+    "cardiology",
+    "stemi"
+  ]
+}

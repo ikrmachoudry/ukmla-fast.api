@@ -1,0 +1,1 @@
+response = requests.post(GROQ_URL, json=payload, headers=headers)
