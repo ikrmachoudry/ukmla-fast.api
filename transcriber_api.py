@@ -1,14 +1,21 @@
 from fastapi import FastAPI, UploadFile, File
 from pydantic import BaseModel
 
-app = FastAPI()
+app = FastAPI()  # ✅ Only one app object — at the top
+
+# ===========================
+# ✅ Ping Route
+# ===========================
+@app.get("/ping")
+def ping():
+    return {"message": "pong"}
 
 # ===========================
 # ✅ Dummy Transcription Endpoint
 # ===========================
 @app.post("/transcribe/")
 async def transcribe(file: UploadFile = File(...)):
-    await file.read()  # Use the file to silence linter warning (for now)
+    await file.read()  # Silence warning for now
     return {"text": "Dummy transcription"}
 
 # ===========================
