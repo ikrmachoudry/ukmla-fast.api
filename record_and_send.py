@@ -3,14 +3,16 @@ from scipy.io.wavfile import write
 import tempfile
 import requests
 import os
-import simpleaudio as sa  # Make sure simpleaudio is installed
+import simpleaudio as sa  # pip install simpleaudio
 
+# ✅ Settings
 SAMPLE_RATE = 16000
 DURATION = 6  # seconds
-RAILWAY_API_URL = "https://your-project.up.railway.app"  # Change to your real URL
+RAILWAY_API_URL = "https://your-project-name.up.railway.app"  # 🔁 Replace with your real Railway URL
 BEEP_FILE_PATH = "beep.wav"
 
 
+# ✅ Play beep before recording
 def play_beep():
     try:
         wave_obj = sa.WaveObject.from_wave_file(BEEP_FILE_PATH)
@@ -20,6 +22,7 @@ def play_beep():
         print(f"⚠️ Could not play beep sound: {e}")
 
 
+# ✅ Record audio from mic
 def record_audio():
     print("🎤 Speak now...")
     play_beep()
@@ -31,6 +34,7 @@ def record_audio():
     return temp_file.name
 
 
+# ✅ Send audio to /transcribe/ and get transcript
 def send_audio_get_transcript(file_path):
     url = f"{RAILWAY_API_URL}/transcribe/"
     try:
@@ -45,6 +49,7 @@ def send_audio_get_transcript(file_path):
         return None
 
 
+# ✅ (Optional) Send transcript to AI and get reply
 def send_text_get_ai_reply(text):
     url = f"{RAILWAY_API_URL}/ai-reply/"
     try:
@@ -57,25 +62,28 @@ def send_text_get_ai_reply(text):
         return None
 
 
+# ✅ Main Loop
 if __name__ == "__main__":
-    audio_file = None
-    try:
-        audio_file = record_audio()
-        transcript = send_audio_get_transcript(audio_file)
-
-        if transcript:
-            print(f"📝 Transcript:\n{transcript}")
-            ai_reply = send_text_get_ai_reply(transcript)
-            if ai_reply:
-                print(f"💬 AI Reply:\n{ai_reply}")
-            else:
-                print("⚠️ No AI reply received.")
-        else:
-            print("⚠️ No transcription received.")
-
-    except Exception as e:
-        print(f"❌ Unexpected error: {e}")
-
-    finally:
-        if audio_file and os.path.exists(audio_file):
+    while True:
+        try:
+            audio_file = record_audio()
+            transcript = send_audio_get_transcript(audio_file)
             os.remove(audio_file)
+
+            if transcript:
+                print(f"📝 Transcript:\n{transcript}")
+                ai_reply = send_text_get_ai_reply(transcript)
+                if ai_reply:
+                    print(f"💬 AI Reply:\n{ai_reply}")
+                else:
+                    print("⚠️ No AI reply received.")
+            else:
+                print("⚠️ No transcription received.")
+
+        except Exception as e:
+            print(f"❌ Unexpected error: {e}")
+
+        cont = input("\nPress Enter to record again or type 'q' to quit: ").strip().lower()
+        if cont == 'q':
+            print("👋 Exiting. Goodbye!")
+            break
