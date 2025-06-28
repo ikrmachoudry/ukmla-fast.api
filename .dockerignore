@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+*.wav
+*.mp3
+*.DS_Store
+env310/
+.vscode/
+.idea/
+*.log

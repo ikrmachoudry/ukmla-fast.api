@@ -1,0 +1,6 @@
+{
+  "python.defaultInterpreterPath": "C:\\Users\\LENOVO\\Desktop\\Python Projects\\ukmla-fastapi\\env310\\Scripts\\python.exe",
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.venvPath": "C:\\Users\\LENOVO\\Desktop\\Python Projects\\ukmla-fastapi",
+  "python.languageServer": "Pylance"
+}
